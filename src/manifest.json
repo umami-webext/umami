@@ -1,0 +1,63 @@
+{
+    "manifest_version": 2,
+    "name": "umami",
+    "version": "2.3.1",
+    "description": "e621 enhancement",
+    "icons": {
+        "48": "icons/salt-48.png",
+        "96": "icons/salt-96.png"
+    },
+    "permissions": [
+        "tabs",
+        "downloads",
+        "storage",
+        "*://*.e621.net/*",
+        "*://*.e926.net/*",
+        "*://*.e6ai.net/*"
+    ],
+    "content_scripts": [{
+        "matches": [
+            "*://*.e621.net/*",
+            "*://*.e926.net/*",
+            "*://*.e6ai.net/*"
+        ],
+        "js": [
+            "lib/WG-polyfill.js",
+            "lib/browser-polyfill.js",
+            "lib/jquery-3.3.1.min.js",
+            "lib/jszip.min.js",
+            "lib/jszip-utils.min.js",
+            "lib/FileSaver.min.js",
+            "js/polyfill.js",
+            "js/cookie.js",
+            "js/util.js",
+            "js/lang.js",
+            "js/trans.js",
+            "js/config.js",
+            "js/thumb.js",
+            "js/slideshow.js",
+            "js/pools.js",
+            "js/posts.js",
+            "js/keys.js",
+            "js/page.js",
+            "js/save.js",
+            "js/share.js",
+            "js/main.js",
+            "js/updates.js"
+        ]
+    }],
+    "background": {
+        "page": "umami.html"
+    },
+    "applications": {
+        "gecko": {
+            "id": "umami@wlf.io"
+        }
+    },
+    "web_accessible_resources": [
+        "css/*",
+        "fonts/*",
+        "html/*",
+        "pagejs/*"
+    ]
+}

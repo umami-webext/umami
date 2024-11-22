@@ -1,0 +1,38 @@
+{
+  "name": "umami",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wlfio/umami.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wlfio/umami/issues"
+  },
+  "homepage": "https://github.com/wlfio/umami#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^4.0.1",
+    "gulp-file": "^0.4.0",
+    "gulp-if": "^3.0.0",
+    "gulp-json-editor": "^2.5.3",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-noop": "^1.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-zip": "^5.0.1"
+  }
+}

@@ -1,0 +1,136 @@
+<div id="WG-PRN-MODAL" class="WG-full" style="display: none;">
+    <div class="WG-carosel-inner" id="WG-PRN-IMG"></div>
+    <div id="WG-PRN-TAGS-CONTAINER" class="sidebar WG-tags-bar WG-NOT-MOBILE" style="display: none;">
+        <div id="WG-PRN-TAGS"></div>
+    </div>
+    <a class="WG-left WG-carosel-control" id="WG-PRN-PREV" href="#">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </a>
+    <a class="WG-right WG-carosel-control" id="WG-PRN-NEXT" href="#">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </a>
+    <a class="WG-tags WG-icon WG-carosel-control WG-toggle-link-slide WG-NOT-MOBILE"
+        data-toggle="#WG-PRN-TAGS-CONTAINER" id="WG-PRN-TAGS-TOGGLE" href="#" target="_blank">
+        <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+    </a>
+    <a class="WG-close WG-icon WG-carosel-control WG-toggle-link" data-toggle="#WG-PRN-MODAL" id="WG-PRN-EXIT" href="#">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    </a>
+    <a class="WG-config-icon WG-icon WG-carosel-control" id="WG-PRN-CONFIG-OPEN" href="#">
+        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+    </a>
+    <div class="WG-vote WG-login-required" id="WG-PRN-VOTE">
+        <a class="WG-icon" id="WG-PRN-VOTE-UP" data-score="1" href="#" data-mute="false">
+            <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+        </a>
+        <span id="WG-PRN-VOTE-SCORE">0</span>
+        <a class="WG-icon" id="WG-PRN-VOTE-DOWN" data-score="-1" href="#">
+            <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+        </a>
+    </div>
+    <a class="WG-fave WG-icon WG-carosel-control WG-login-required" id="WG-PRN-FAVE" href="#">
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+    </a>
+    <a class="WG-down WG-icon WG-carosel-control" id="WG-PRN-DOWN" href="#">
+        <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+    </a>
+    <a class="WG-link WG-icon WG-carosel-control" id="WG-PRN-LINK" href="#" target="_blank">
+        <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+    </a>
+    <a class="WG-slide WG-icon WG-carosel-control" id="WG-PRN-SLIDE" href="#">
+        <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+        <span class="WG-icon2 glyphicon glyphicon-play" id="WG-PRN-SLIDE-START" aria-hidden="true"></span>
+        <span class="WG-icon2 glyphicon glyphicon-pause" id="WG-PRN-SLIDE-STOP" style="display: none;"
+            aria-hidden="true"></span>
+    </a>
+    <a class="WG-mute WG-icon WG-carosel-control" id="WG-PRN-MUTE" href="#" data-mute="false">
+        <span class="glyphicon glyphicon-volume-up" id="WG-PRN-MUTE-NO" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-volume-off" id="WG-PRN-MUTE-YES" style="display: none;"
+            aria-hidden="true"></span>
+    </a>
+    <div class="sidebar WG-autoplay">
+        <input type="checkbox" class="WG-auto-config WG-translate-text" rel="slideshow.video.autoplay"
+            id="WG-PRN-AUTOPLAY" data-section="slideshow.autoplay" data-str="title" />
+        <span class="WG-translate-text" data-section="slideshow.ui" data-str="autoplay">Autoplay Video</span>
+    </div>
+    <div class="sidebar WG-loop">
+        <input type="checkbox" class="WG-auto-config" rel="slideshow.video.loop" id="WG-PRN-LOOP" />
+        <span class="WG-translate-text" data-section="slideshow.ui" data-str="loop">Loop Video</span>
+    </div>
+    <div class="WG-slide-range WG-carosel-control" id="WG-PRN-SLIDE-RANGE-DIV" style="display: none;">
+        <input type="range" min="3" max="60" value="5" step="1" class="slider WG-auto-config" rel="slideshow.speed"
+            id="WG-PRN-SLIDE-RANGE">
+        <label data-interval="5" id="WG-PRN-SLIDE-RANGE-DISP">
+            <span class="WG-auto-config-disp" rel="slideshow.speed"></span>s
+        </label>
+    </div>
+</div>
+<div id="WG-PRN-CONFIG" class="WG-full" style="display: none;">
+    <div class="WG-config WG-popup WG-ELEM ui-widget-content">
+        <h3>umami (<span class="WG-umami-version"></span>): <span class="WG-translate-text" data-section="config"
+                data-str="title">config>title</span></h3>
+        <a class="WG-close WG-icon WG-carosel-control" id="WG-PRN-CONFIG-EXIT" href="#">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </a>
+        <a class="WG-reset WG-icon WG-carosel-control" title="Reset Config" id="WG-PRN-CONFIG-RESET" href="#">
+            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+        </a>
+        <div>
+            <div id="WG-PRN-CONFIG-BODY"></div>
+            <div id="WG-PRN-CONFIG-KEYS">
+                <hr>
+                <a href="#" class="WG-toggle-link-slide" data-toggle="#WG-PRN-KEY-TABLE">
+                    Key Bindings&nbsp;
+                    <span class="glyphicon glyphicon-plus WG-toggle-disp"></span>
+                    <span class="glyphicon glyphicon-minus WG-toggle-disp" style="display: none;"></span>
+                </a>
+                <br>
+                <table id="WG-PRN-KEY-TABLE" class="rounded" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Key</th>
+                            <th style="min-width: 210px;">Key 1</th>
+                            <th style="min-width: 210px;">Key 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="WG-PRN-NOTICE" class="WG-full" style="display: none;">
+    <div class="WG-notice WG-popup WG-ELEM ui-widget-content">
+        <div class="WG-popup-header">
+            <h3>umami (<span class="WG-umami-version"></span>): <span class="WG-translate-text" data-section="notice"
+                    data-str="about">about</span></h3>
+            <a class="WG-close WG-icon WG-carosel-control WG-toggle-link" data-toggle="#WG-PRN-NOTICE" href="#">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </a>
+            <p>
+                Hi, this notice is showing because umami has updated<br>
+                Please send feedback to @wolfgang on telegram or <a href="https://e621.net/forum/show/251741">this forum
+                    thread</a>
+            </p>
+            <hr>
+        </div>
+        <div id="WG-PRN-NOTICE-CONTENT"></div>
+        <p style="font-size: 10px;color:#999">Updates before 1.6 were not documented.</p>
+    </div>
+</div>
+<div id="WG-PRN-KEY-CAPTURE" class="WG-full" style="display: none;">
+    <span>Press A Key..</span>
+</div>
+<div id="WG-PRN-SAVE" class="ui-widget-content" style="display: none;">
+    <h4><span class="WG-translate-text" data-section="ui" data-str="downloads">downloads</span></h4>
+    <div id="WG-PRN-SAVE-BAR-CONTAINER">
+        <!--div class="progress">
+            <div id="WG-PRN-SAVE-BAR" class="progress-bar progress-bar-striped active"
+                style="min-width: 2%;width: 60%;">
+                60%
+            </div>
+        </div-->
+    </div>
+</div>

@@ -1,0 +1,484 @@
+.WG-full {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.90);
+    text-align: center;
+}
+
+.WG-carosel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 7.5vw;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0);
+    filter: alpha(opacity=50);
+    opacity: .5;
+    text-shadow: -1px 1px 2px #152f56,
+				  1px 1px 2px #152f56,
+				  1px -1px 0 #152f56,
+				  -1px -1px 0 #152f56;
+}
+
+.WG-tags-bar {
+    position: absolute;
+    float: left;
+    top: 0px;
+    padding-left: 7.5vw;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-height: calc(100vh - 130px);
+    text-align: left;
+    /* background-color: rgba(21, 47, 86, .75); */
+    overflow-y: scroll;
+    opacity: .75;
+    text-shadow: -1px 1px 2px #152f56,
+				  1px 1px 2px #152f56,
+				  1px -1px 0 #152f56,
+				  -1px -1px 0 #152f56;
+}
+
+.WG-carosel-control>span {
+    position: absolute;
+    /* left: 50px; */
+    top: 50%;
+    font-size: 50px;
+}
+
+.WG-carosel-control.WG-right>span {
+    /* position: absolute; */
+    left: 0;
+    right: 0;
+    /* top: 50%;
+    font-size: 50px; */
+}
+
+.WG-carosel-control.WG-right {
+    left: auto;
+    right: 0;
+}
+
+
+.WG-carosel-control.WG-left:hover,
+.WG-carosel-control.WG-right:hover{
+    background-color: rgba(21, 47, 86, .75);
+}
+
+.WG-carosel-control.WG-left>span,
+.WG-carosel-control.WG-right>span {
+    position: absolute;
+    left: 2vw;
+    top: 50%;
+    font-size: 3.5vw;
+}
+
+
+.WG-carosel-control.WG-close {
+    top: 10px;
+    bottom: auto;
+    left: auto;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.WG-carosel-control.WG-reset {
+    top: 10px;
+    bottom: auto;
+    left: auto;
+    right: 60px;
+    width: 40px;
+    height: 40px;
+}
+
+.WG-carosel-control.WG-fave {
+    top: auto;
+    left: auto;
+    bottom: 10px;
+    right: 130px;
+    width: 40px;
+    height: 40px;
+}
+
+.WG-carosel-control.WG-config-icon {
+    top: 10px;
+    bottom: auto;
+    left: auto;
+    right: 60px;
+    width: 40px;
+    height: 40px;
+}
+
+.WG-carosel-control.WG-tags {
+    bottom: auto;
+    top: 10px;
+    right: auto;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.WG-shadow {
+    box-shadow: 0px 0px 10px #07162D, 0px 0px 10px #07162D;
+}
+
+.WG-carosel-control.WG-down {
+    top: auto;
+    bottom: 10px;
+    left: auto;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.WG-carosel-control.WG-slide {
+    top: auto;
+    bottom: 10px;
+    left: 10px;
+    right: auto;
+    width: 40px;
+    height: 40px;
+}
+
+.WG-carosel-control.WG-mute {
+    top: auto;
+    bottom: 60px;
+    left: 10px;
+    right: auto;
+    width: 40px;
+    height: 40px;
+}
+
+.WG-autoplay {
+    position: absolute;
+    top: auto;
+    bottom: 60px;
+    left: 60px;
+    right: auto;
+    text-align: left;
+    width: 150px;
+    height: 25px;
+    opacity: .5;
+    text-shadow: -1px 1px 2px #152f56,
+				  1px 1px 2px #152f56,
+				  1px -1px 0 #152f56,
+				  -1px -1px 0 #152f56;
+}
+
+.WG-loop {
+    position: absolute;
+    top: auto;
+    bottom: 80px;
+    left: 60px;
+    right: auto;
+    text-align: left;
+    width: 150px;
+    height: 25px;
+    opacity: .5;
+    text-shadow: -1px 1px 2px #152f56,
+				  1px 1px 2px #152f56,
+				  1px -1px 0 #152f56,
+				  -1px -1px 0 #152f56;
+}
+
+.WG-carosel-control.WG-slide-range {
+    top: auto;
+    bottom: 14px;
+    left: 100px;
+    right: auto;
+    width: 220px;
+    height: 25px;
+}
+
+.WG-carosel-control.WG-slide-range>input {
+    margin: 0;
+    float: left;
+    padding-top: 5px;
+}
+
+.WG-carosel-control.WG-link {
+    top: auto;
+    bottom: 10px;
+    left: auto;
+    right: 60px;
+    width: 40px;
+    height: 40px;
+}
+
+.WG-carosel-control.WG-icon>span {
+    position: absolute;
+    left: 0px;
+    right: auto;
+    top: 0px;
+    font-size: 40px;
+}
+
+.WG-popup .WG-carosel-control {
+    width: 20px;
+    height: 20px;
+}
+
+.WG-popup .WG-carosel-control>span {
+    font-size: 20px;
+}
+
+.WG-icon2 {
+    left: 50px !important;
+    text-shadow: -1px 1px 2px #152f56,
+				  1px 1px 2px #152f56,
+				  1px -1px 0 #152f56,
+				  -1px -1px 0 #152f56;
+}
+
+.WG-popup {
+    position: absolute;
+    left: 20vw;
+    width: 60vw;
+    top: 10vh;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.WG-popup h3,
+.WG-popup h4 {
+    text-align: left;
+}
+
+.WG-carosel-inner {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.WG-carosel-inner video, img {
+					   
+    max-width: 100%;
+    max-height: 100%;
+					 
+}  
+
+.WG-vote {
+    position: absolute;
+    opacity: .5;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    top: auto;
+    right: auto;
+    height: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 100px;
+    text-shadow: -1px 1px 2px #152f56,
+				  1px 1px 2px #152f56,
+				  1px -1px 0 #152f56,
+				  -1px -1px 0 #152f56;
+}
+
+article.thumbnail {
+    border: 2px solid #00000000;
+    /* height: 191px;
+    width: 176px; */
+}
+
+article.thumbnail.WG-selected {
+    border-color: red;
+}
+
+#WG-PRN-VOTE-UP.WG-voted {
+    color: green;
+}
+
+#WG-PRN-VOTE-DOWN.WG-voted {
+    color: red;
+}
+
+.WG-faved>span {
+    color: yellow;
+}
+
+#WG-PRN-VOTE-DOWN {
+    margin-right: 200px;
+}
+
+.WG-MOBILE {
+    display: none;
+}
+
+button.WG-MENUEXPAND {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+
+#WG-PRN-KEY-CAPTURE {
+    padding-top: 45vh;
+    text-align: center;
+}
+
+#WG-PRN-SAVE {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    padding: 5px;
+}
+
+#WG-PRN-SAVE .progress {
+    /* margin: 0 5px; */
+}
+
+#WG-PRN-SAVE .progress-bar {
+    min-width: 2%;
+    width: 2%;
+}
+
+.WG-keycap-btn {
+    min-width: 150px !important;
+}
+
+.WG-keycap-btn.conflict {
+    color: red;
+}
+
+.WG-keycap-reset {
+    margin-left: 5px;
+}
+
+.WG-config table {
+    margin-top: 10px;
+    display: inline-table;
+    width: 100%;
+}
+
+.WG-config table th:first-of-type {
+    max-width: 300px;
+    min-width: 240px;
+}
+
+.WG-config table.rounded td {
+    padding: 2px 2px;
+}
+
+.WG-config table.rounded th {
+    padding: 2px 2px;
+}
+
+th.WG-column-btn {
+    text-align: center;
+    width: 60px;
+}
+
+td.WG-column-btn {
+    text-align: center;
+    width: 60px;
+}
+
+th.WG-column-main {
+    min-width: 50%;
+}
+
+td.WG-column-main {
+    min-width: 50%;
+}
+
+td.WG-column-main input {
+    min-width: 100%;
+}
+
+td.WG-column-main textarea {
+    min-width: 100%;
+}
+
+.WG-float-left {
+    float: left;
+}
+
+.WG-float-right {
+    float: right;
+}
+
+.WG-pad-10-l {
+    padding-left: 10px;
+}
+
+.WG-pad-10-r {
+    padding-right: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    .WG-MOBILE {
+        display: block;
+    }
+    .WG-MOBILE-SHOW {
+        display: block !important;
+    }
+    .WG-NOT-MOBILE {
+        display: none;
+    }
+    .WG-popup {
+        left: 10vw;
+        width: 80vw;
+    }
+}
+
+.WG-ELEM.ui-widget-content {
+    padding: 5px;
+}
+
+#WG-PRN-TAGS {
+    max-height: calc(-110px + 100vh);
+}
+
+#WG-PRN-NOTICE ul{
+    padding-left: 15px;
+    list-style: revert;
+}
+#WG-PRN-NOTICE h5{
+    margin-top: 10px;
+}
+
+.WG-pool-show-dl-btn {
+    padding: 0 5px;
+    margin-left: 15px;
+}
+
+#WG-PRN a {
+    color: #b4c7d9;
+}
+
+.WG-keycap-btn:hover {
+    background-color: #b4c7d9;
+}
+
+.WG-WARN {
+    font-weight: bold;
+    color: red;
+}
+
+/* .WG-popup-header {
+    background-color: #284a81 !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+} */
