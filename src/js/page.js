@@ -120,7 +120,7 @@ var Page;
                 case "":
                 case "/posts":
                 case "/pools/<number>":
-                    return $("article.post-preview", data).parent();
+                    return $(Thumbs.cssThumb, data).parent();
                 case "/pools":
                     return $("tr[id^=pool-]", data).parent();
                 default:

@@ -107,6 +107,12 @@ const Updates = {};
                     fixed: [
                         "e621 changed name of css tags"
                     ]
+                },
+                v02: {
+                    text: "Updated to fix infinite scroll",
+                    fixed: [
+                        "e621 changed name of css tags"
+                    ]
                 }
             }
         },
