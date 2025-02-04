@@ -91,7 +91,7 @@ var SlideShow;
             if (SlideShow.modalOpen()) {
                 SlideShow.next();
                 SlideShow.scheduleSlide(
-                    SlideShow.timeoutOverride != null ? slideTimeOverride : SlideShowHTML.getSlideSpeed()
+                    SlideShow.timeoutOverride != null ? SlideShow.timeoutOverride : SlideShowHTML.getSlideSpeed()
                 );
             }
         },
