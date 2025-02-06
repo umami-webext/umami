@@ -140,8 +140,8 @@ var Thumbs;
                         const fav = $(".fav-buttons", data);
 
                         thumb.data("faved", fav.hasClass("fav-buttons-true"));
-                        thumb.data("voted", vup.parent().hasClass("score-positive") ? 1 : vdn.parent().hasClass("score-negative") ? -1 : 0);
-                        thumb.data("score", parseInt($("span.post-score", data).text()));
+                        thumb.data("voted", vup.find(".score-positive").hasClass("score-positive") ? 1 : vdn.find(".score-negative").hasClass("score-negative") ? -1 : 0);
+                        thumb.data("score", parseInt($("span.post-score", data).first().text()));
 
                         const content = $("#image-container", data);
                         thumb.data("content", content);
