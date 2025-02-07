@@ -212,7 +212,7 @@ var Util;
             });
             return res;
         },
-        glyphiconLink: (type, classes) => $("<a>").attr({ href: "#" }).append('<span class="glyphicon glyphicon-' + type + '">').addClass(classes),
+        glyphiconLink: (type, classes) => $("<a>").attr({ href: "#!" }).append('<span class="glyphicon glyphicon-' + type + '">').addClass(classes),
         urlParams: (str) => {
             const res = {};
             (new URLSearchParams(str || window.location.search)).forEach((val, key) => {
@@ -352,7 +352,7 @@ var Version;
                                     .append(
                                         $("<a>")
                                             .addClass("WG-toggle-link-slide")
-                                            .attr("href", "#")
+                                            .attr("href", "#!")
                                             .data("toggle", blockID)
                                             .html(major + "." + minor + "&nbsp;")
                                             .append($('<span class="glyphicon glyphicon-plus WG-toggle-disp"' + (firstMinor ? ' style="display: none;"' : '') + '></span>'))

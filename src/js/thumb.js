@@ -103,7 +103,7 @@ var Thumbs;
         },
         getThumbIndex: (thumb) => $(cssThumbNotBlacklisted).index(thumb),
         loadContent: (thumb, cb) => {
-            Thumbs.navigateToIndex(Thumbs.getThumbIndex(thumb));
+            Util.scrollTo(Thumbs.navigateToIndex(Thumbs.getThumbIndex(thumb)));
             const prev = thumb.prevAll(cssThumbNotBlacklisted).first();
             const next = thumb.nextAll(cssThumbNotBlacklisted).first();
 

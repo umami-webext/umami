@@ -204,7 +204,7 @@ var DefaultConfig = {};
         rendered: false,
         init: () => {
             $("<li>").attr("id", "nav-umami").addClass("WG-reload-remove").append(
-                $("<a>").attr("href", "#").text("Umami")
+                $("<a>").attr("href", "#!").text("Umami")
                     .on("click", () => { $("#WG-PRN-CONFIG").show(); })
             ).insertBefore($("li#nav-more"));
             ConfigHTML.bind();
@@ -300,7 +300,7 @@ var DefaultConfig = {};
 
         createSectionAccordionLink: (name) => {
             return $('<a>')
-                .attr({ href: "#" })
+                .attr({ href: "#!" })
                 .data({ toggle: "#" + ConfigHTML.getSectionID(name) })
                 .addClass("WG-toggle-link")
                 .append(Trans.createElem(name + ".config", "title"))
@@ -434,7 +434,7 @@ var DefaultConfig = {};
             if (typeof help === "string" && help.length > 5) {
                 td.append(
                     $("<a>")
-                        .attr({ href: "#", title: help })
+                        .attr({ href: "#!", title: help })
                         .text("?")
                         .addClass("WG-float-right WG-pad-10-r")
                 );
@@ -585,7 +585,7 @@ var DefaultConfig = {};
             let help = Trans.translate(trans + "Help", opt);
             if (typeof help === "string" && help.length > 1 && help != opt) {
                 return $("<a>")
-                    .attr({ href: "#", title: help })
+                    .attr({ href: "#!", title: help })
                     .text("?")
                     .addClass("WG-float-right WG-pad-10-r");
             }
