@@ -17,6 +17,9 @@ var Page;
                     case "/pools/<number>":
                     case "/pools":
                         return true;
+					case "/pools/gallery":
+						SlideShow.enabled = () => false;
+						return true;
                     default:
                         break;
 
