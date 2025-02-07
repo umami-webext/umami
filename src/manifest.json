@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "umami",
-    "version": "2.4.0",
+    "version": "2.5.0",
     "description": "e621 enhancement",
     "icons": {
         "48": "icons/salt-48.png",
