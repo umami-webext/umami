@@ -125,7 +125,7 @@ var Util;
             return Promise.resolve();
         },
         configUiInit: (id) => {
-            ConfigTableHTML.createIn("#" + id, "general", { slideshow: "bool", infiniteScroll: "bool", keyBinds: "bool", "activeLanguage": Object.keys(Lang) });
+            ConfigTableHTML.createIn("#" + id, "general", { slideshow: "bool", infiniteScroll: "bool", keyBinds: "bool", largeImages: "bool", "activeLanguage": Object.keys(Lang) });
             return Promise.resolve(id);
         },
         pathWildCardRegex: (path, seperator, caseInsensetive) => {

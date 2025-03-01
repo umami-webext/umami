@@ -2,6 +2,7 @@ var SlideShow;
 
 (function () {
     const confEnabled = "general.slideshow";
+	const conflargeImages = "general.largeImages";
     SlideShow = {
         modalID: "WG-PRN-MODAL",
         timeout: null,
@@ -21,6 +22,9 @@ var SlideShow;
         },
         contentToLoad: (thumb) => {
             SlideShow.currentThumb = thumb;
+			if (Config.get(conflargeImages)){
+				thumb.data("content").find("#image").attr("src", thumb.data("content").attr("data-file-url"));
+			}
             SlideShowHTML.modalImg.html(thumb.data("content"));
             SlideShowHTML.modalImg.find("#note-container").remove();
             var id = thumb.data("id");

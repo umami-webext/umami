@@ -115,12 +115,14 @@ var Lang;
                         slideshow: "Slideshow Enabled",
                         infiniteScroll: "Infinite Scroll Enabled",
                         keyBinds: "Key Binds Enabled",
+						largeImages :"High Resolution Enabled",
                         activeLanguage: "Language",
                     },
                     tableHelp: {
                         slideshow: "Toggle slideshow on and off",
                         infiniteScroll: "Toggle automatic loading of next page",
                         keyBinds: "Toggle shortcut keys functionality",
+						largeImages :"Toggle loading higer resolution images\nWARNING: this uses much more data and can cause slow loading",
                         activeLanguage: "Language for text of umami plugin",
                     },
                     tableOption: {
