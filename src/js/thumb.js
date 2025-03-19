@@ -3,6 +3,7 @@ var Thumbs;
 	const cssThumb = "article.thumbnail";
 	const cssBlacklisted = ".blacklisted-active,.blacklisted";
 	const cssThumbNotBlacklisted = cssThumb + ":not(" + cssBlacklisted + ")";
+	const confPostResolution="general.postResolution";
 	Thumbs = {
 		cssThumb: cssThumb,
 		selected: 0,
@@ -122,6 +123,24 @@ var Thumbs;
 		},
 		downloadContent: (thumb, cb) => {
 			if (thumb.length < 1) return;
+			let imgUrl=null;
+			if (typeof thumb.data("content") !== "undefined") {
+				switch (Config.get(confPostResolution)) {
+					case "high":
+						imgUrl=thumb.data("content").attr("data-file-url")
+						break;
+					case "low":
+						imgUrl=thumb.data("content").attr("data-large-url")
+						break;
+					case "default":
+					default:
+						break;
+				}
+				if (imgUrl!==null && imgUrl!=thumb.data("content").find("#image").attr("src")){
+					thumb.removeData("content");
+				}
+			}
+			
 			if (typeof thumb.data("content") !== "undefined") {
 				if (typeof cb === "function") {
 					cb(thumb);
@@ -145,7 +164,23 @@ var Thumbs;
 
 						const content = $("#image-container", data);
 						thumb.data("content", content);
-
+						switch (Config.get(confPostResolution)) {
+							case "high":
+								thumb.data("content").find("#image").attr("src", thumb.data("content").attr("data-file-url"));
+								thumb.data("content").find("#image").find("source").remove();
+								break;
+							case "low":
+								if (thumb.data("content").find("#image").is("video")){
+									thumb.data("content").find("#image").attr("src", Object.values(JSON.parse(thumb.data("content").attr("data-post")).sample.alternates)[0].urls[0]);
+								} else {
+									thumb.data("content").find("#image").attr("src", thumb.data("content").attr("data-large-url"));
+								}
+								thumb.data("content").find("#image").find("source").remove();
+								break;
+							case "default":
+							default:
+								break;
+						}
 						const dl = $("h4>a:contains('Download')", data);
 						if (dl.length > 0) {
 							thumb.data("download", dl.attr("href"));

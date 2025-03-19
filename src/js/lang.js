@@ -115,17 +115,22 @@ var Lang;
 						slideshow: "Slideshow Enabled",
 						infiniteScroll: "Infinite Scroll Enabled",
 						keyBinds: "Key Binds Enabled",
-						largeImages: "High Resolution Enabled",
+						postResolution: "Post Resolution",
 						activeLanguage: "Language",
 					},
 					tableHelp: {
 						slideshow: "Toggle slideshow on and off",
 						infiniteScroll: "Toggle automatic loading of next page",
 						keyBinds: "Toggle shortcut keys functionality",
-						largeImages: "Toggle loading higher resolution images\nWARNING: this uses much more data and can cause slow loading",
+						postResolution: "Change resolution of posts\nDefault uses the \"default image width\" from account settings",
 						activeLanguage: "Language for text of umami plugin",
 					},
 					tableOption: {
+						postResolution: {
+							default: "Default",
+							high: "High",
+							low: "Low",
+						},
 						activeLanguage: {
 							en: "English (GB)",
 							owo: "OwO",

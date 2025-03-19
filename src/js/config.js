@@ -11,7 +11,7 @@ var DefaultConfig = {};
 			infiniteScroll: true,
 			slideshow: true,
 			keyBinds: true,
-			largeImages: false,
+			postResolution: "default",
 			activeLanguage: "en",
 		},
 		keys: {
@@ -601,7 +601,7 @@ var DefaultConfig = {};
 			const type = ConfTableHTML.types[opt] || ((val === true || val === false) ? "bool" : "text");
 			if (type instanceof Array) {
 				;
-				return $("<select>").append(type.map(oval => Trans.createElem(trans + "Option." + opt, oval, "option").val(oval).attr("selected", val == oval ? "selected" : "")));
+				return $("<select>").append(type.map(oval => Trans.createElem(trans + "Option." + opt, oval, "option").val(oval).prop("selected", val == oval)));
 			} else {
 				switch (type.type || type) {
 					case "bool":

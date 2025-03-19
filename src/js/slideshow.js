@@ -2,7 +2,7 @@ var SlideShow;
 
 (function() {
 	const confEnabled = "general.slideshow";
-	const conflargeImages = "general.largeImages";
+	const confPostResolution="general.postResolution";
 	SlideShow = {
 		modalID: "WG-PRN-MODAL",
 		timeout: null,
@@ -14,6 +14,7 @@ var SlideShow;
 			Keys.registerKeyUp(SlideShow.handleKeyUp, 20, "slide");
 			Keys.registerKeyDown(SlideShow.handleKeyDown, 20, "slide");
 			Config.hook("slideshow.speed", SlideShow.timeoutUpdate);
+			Config.hook(confPostResolution, SlideShow.refreshContent);
 			return Promise.resolve();
 		},
 		htmlInit: () => {
@@ -22,9 +23,6 @@ var SlideShow;
 		},
 		contentToLoad: (thumb) => {
 			SlideShow.currentThumb = thumb;
-			if (Config.get(conflargeImages)) {
-				thumb.data("content").find("#image").attr("src", thumb.data("content").attr("data-file-url"));
-			}
 			SlideShowHTML.modalImg.html(thumb.data("content"));
 			SlideShowHTML.modalImg.find("#note-container").remove();
 			var id = thumb.data("id");
@@ -56,6 +54,11 @@ var SlideShow;
 				}
 			}
 			$("#WG-PRN-TAGS").html(thumb.data("tags"));
+		},
+		refreshContent: () => {
+			SlideShowHTML.getDisplayCurrent().removeData("content");
+			SlideShow.display(SlideShowHTML.getDisplayCurrent());
+			
 		},
 		display: (thumb) => {
 			SlideShowHTML.modalImg.data(
