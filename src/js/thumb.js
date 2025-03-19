@@ -127,10 +127,14 @@ var Thumbs;
 			if (typeof thumb.data("content") !== "undefined") {
 				switch (Config.get(confPostResolution)) {
 					case "high":
-						imgUrl=thumb.data("content").attr("data-file-url")
+						imgUrl=thumb.data("content").attr("data-file-url");
 						break;
 					case "low":
-						imgUrl=thumb.data("content").attr("data-large-url")
+						if (thumb.data("content").find("#image").is("video")){
+							imgUrl=Object.values(JSON.parse(thumb.data("content").attr("data-post")).sample.alternates)[0].urls[0];
+						} else {
+							imgUrl=thumb.data("content").attr("data-large-url");
+						}
 						break;
 					case "default":
 					default:
