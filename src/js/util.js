@@ -3,7 +3,7 @@ var User;
 	User = {
 		login: null,
 		apiKey: null,
-		loggedIn: () => $(".sign-in").length == 0,
+		loggedIn: () => $(".login-name").length == 0,
 		init: () => {
 			// User.login = Cookie.get("login");
 			// User.loadApiKey();
